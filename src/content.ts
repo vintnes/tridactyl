@@ -352,7 +352,9 @@ config.getAsync("modeindicator").then(mode => {
             config.get("modeindicator") !== "true" ||
             config.get("modeindicatormodes", mode) === "false"
         ) {
-            statusIndicator.remove()
+            target.classList.add("TridactylInvisible")
+        } else {
+            target.classList.remove("TridactylInvisible")
         }
     })
 })
